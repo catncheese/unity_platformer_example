@@ -8,8 +8,7 @@ public class CoinController : MonoBehaviour
     {
         if(otherCollider.gameObject.tag == PLAYER_TAG)
         {
-            CharacterController controller = otherCollider.gameObject.GetComponent<CharacterController>();
-            controller?.IncrementScore();
+            GameStateController.Instance.CoinsCount++;
 
             Destroy(gameObject);
         }
